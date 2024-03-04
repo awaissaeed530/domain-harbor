@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Domain Harbor</title>
+
+		<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+	</head>
+
+	<body>
+		<form
+			hx-post="/available"
+			hx-target="#res"
+			hx-swap="outerHTML"
+			hx-trigger="submit"
+		>
+			<input type="text" name="domain" placeholder="example.com" />
+			<button type="submit">Check</button>
+		</form>
+		<div id="res"></div>
+	</body>
+</html>
